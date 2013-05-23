@@ -1,0 +1,36 @@
+{
+    "name": "igor/experiment",
+    "license": "MIT",
+    "type": "project",
+    "description": "SymfonyLive 2013",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.3.*",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "igorw/yolo": "~42.0@dev"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "incenteev-parameters": {
+            "file": "yolo.yml",
+            "dist-file": "yolo.yml.dist"
+        },
+        "branch-alias": {
+            "dev-master": "2.4-dev"
+        }
+    }
+}
