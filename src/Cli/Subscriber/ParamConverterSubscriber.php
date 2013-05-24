@@ -11,7 +11,7 @@ class ParamConverterSubscriber implements EventSubscriber
     public function getSubscribedEvents()
     {
         return [
-            KernelEvents::REQUEST => ['preConvert', 10],
+            KernelEvents::REQUEST => [['preConvert', 10]],
         ];
     }
 
@@ -20,7 +20,7 @@ class ParamConverterSubscriber implements EventSubscriber
         $request = $event->getRequest();
         if (!$request->attributes->has('request')) {
             $request->attributes->set('request', $request);
-            $request->attributes->set('argv1', ...);
+            //$request->attributes->set('argv1', ...);
         }
     }
 }
