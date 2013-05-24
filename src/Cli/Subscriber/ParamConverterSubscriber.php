@@ -2,13 +2,13 @@
 
 namespace Cli\Subscriber;
 
-use Doctrine\Common\EventSubscriber;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
-class ParamConverterSubscriber implements EventSubscriber
+class ParamConverterSubscriber implements EventSubscriberInterface
 {
-    public function getSubscribedEvents()
+    public static function getSubscribedEvents()
     {
         return [
             KernelEvents::REQUEST => [['preConvert', 10]],
