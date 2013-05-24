@@ -3,14 +3,13 @@
 namespace Cli;
 
 // interactors, extensions, exceptions, providers
-
+use Symfony\Component\HttpFoundation\Request;
+use Yolo;
+use Yolo\Application;
+use Yolo\DependencyInjection\ServiceControllerExtension;
 use Cli\Decorator\RouteDecorator;
 use Cli\Extension\MyExtension;
 use Cli\Subscriber\ParamConverterSubscriber;
-use Symfony\Component\HttpFoundation\Request;
-use Yolo\Application;
-use Yolo;
-use Yolo\DependencyInjection\ServiceControllerExtension;
 
 $container = Yolo\createContainer(
     [
