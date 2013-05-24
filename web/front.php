@@ -18,7 +18,7 @@ if ($argc <= 1) {
     throw new \Exception('Cli app needs arguments');
 }
 
-$request = Request::create($argv[1], $argv[2]);
+$request = Request::create($argv[1], "GET", array_slice($argv, 2));
 $response = $kernel->handle($request);
 
 echo $response->getContent();

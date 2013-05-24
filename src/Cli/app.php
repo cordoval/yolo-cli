@@ -35,7 +35,9 @@ $app
 ;
 
 decorate($app->get('/echo', $controller))
-    ->convert('x', function ($_, Request $request) {})
+    ->convert('request', function ($_, Request $request) {
+
+    })
 ;
 
 return $app;

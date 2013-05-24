@@ -12,7 +12,8 @@
         "php": ">=5.3.3",
         "symfony/symfony": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-        "igorw/yolo": "~42.0@dev"
+        "igorw/yolo": "~42.0@dev",
+        "jeremeamia/SuperClosure": "dev-refactor"
     },
     "require-dev": {
         "behat/behat": "2.4.*",
