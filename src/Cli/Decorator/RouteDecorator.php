@@ -13,7 +13,7 @@ class RouteDecorator
 
     function convert($name, $converter) {
         $converters = $this->route->getOption('_converters');
-        $converters[$name] = $callback;
+        $converters[$name] = $converter;
         $this->route->setOption('_converters', $converters);
 
         return $this;
