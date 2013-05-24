@@ -4,13 +4,23 @@
     "type": "project",
     "description": "SymfonyLive 2013",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": {
+            "": "src/"
+        }
     },
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
         "igorw/yolo": "~42.0@dev"
+    },
+    "require-dev": {
+        "behat/behat": "2.4.*",
+        "phpunit/phpunit": "3.7.*",
+        "phake/phake": "2.0.x-dev",
+        "doctrine/dbal": "~2.3",
+        "behat/mink": "~1.5",
+        "behat/mink-browserkit-driver": "~1.1"
     },
     "scripts": {
         "post-install-cmd": [
