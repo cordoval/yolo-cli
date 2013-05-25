@@ -1,0 +1,3 @@
+services:
+    board.interactor:
+        class: Chess\Interactor\BoardInteractor

@@ -24,20 +24,20 @@ $container = Yolo\createContainer(
 
 $app = new Application($container);
 
-$controller = function(Request $request) {
-    // some handling of the request but already converted?
-};
-
 $app
     ->getContainer()
     ->get('dispatcher')
-    ->addSubscriber(new ParamConverterSubscriber())
+    ->addSubscriber(new ParamConverterSubscriber(
+        $app->getContainer()->get('routes')
+    ))
 ;
 
-decorate($app->get('/echo', $controller))
-    ->convert('request', function ($_, Request $request) {
+$converter = function ($_, Request $request) {
 
-    })
+};
+
+decorate($app->get('/echo', 'board.interactor'))
+    ->convert('request', $converter)
 ;
 
 return $app;
