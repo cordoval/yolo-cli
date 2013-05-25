@@ -6,6 +6,6 @@ class BoardInteractor
 {
     function __invoke($request)
     {
-return "wrer";
+        return "wrer";
     }
 }
