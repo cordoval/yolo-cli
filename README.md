@@ -1,7 +1,7 @@
-yolo-chess
-==========
+yolo-cli
+========
 
-yolo + chess
+yolo cli
 
 You would run it like:
 
